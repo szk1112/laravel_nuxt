@@ -1,18 +1,6 @@
-## Test メソッド Execution time
-1行目：メソッドの実行タイム
-2行目：debugバーの応答時間
-```
-#OpCache only (JIT disable)
-0.0067543101
-700ms
-```
-```
-#JIT 1235
-0.0052725911
-700ms
-```
-```
-#JIT tracing
-0.0037129927
-400ms
+## Usage
+```bash
+docker-compose build
+docker-compose run --rm php-fpm sh -c "cp .env.example .env; composer install;php artisan migrate"
+docker-compose up -d
 ```
